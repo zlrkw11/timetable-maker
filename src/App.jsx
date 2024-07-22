@@ -17,7 +17,37 @@ const hours = [
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 const App = () => {
-  return <div></div>;
+  return (
+    <div className="p-4">
+      <table className="min-w-full border-collapse table-auto">
+        <thead>
+          <tr>
+            <th className="border px-4 py-2">Time</th>
+            {days.map((day) => (
+              <th key={day} className="border-l border-r px-4 py-2">
+                {day}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {hours.map((hour) => (
+            <tr key={hour}>
+              <td className="border px-4 py-2">{hour}</td>
+              {days.map((day) => (
+                <td
+                  key={`${day}-${hour}`}
+                  className="border-l border-r px-4 py-2"
+                >
+                  {/* Cell content here */}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default App;
