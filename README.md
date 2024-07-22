@@ -1,2 +1,3 @@
-# timetable-maker
-personal uoa timetable web app
+# ZL Timetable
+
+created by zlrkw11
